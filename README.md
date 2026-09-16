@@ -25,7 +25,7 @@ colaborativo.
 - **Nombre oficial:** Youth Risk Behavior Survey (YRBS) 2023 — muestra nacional.
 - **Institución:** Centers for Disease Control and Prevention (CDC), Estados Unidos.
 - **Enlace:** https://www.cdc.gov/yrbs/data/index.html
-- **Archivo en el repositorio:** `F1/Data/raw/XXH2023_YRBSS_data.csv`
+- **Archivo en el repositorio:** `F1/data/raw/XXH2023_YRBSS_data.csv`
 - **Licencia:** dato público de agencia federal estadounidense, de libre uso con
   atribución a la fuente.
 - **Dimensiones:** 20.103 registros × 117 variables originales.
@@ -66,7 +66,7 @@ colaborativo.
 ```
 proyecto-grupo8-mcdi500/
 ├─ F1/
-│  ├─ Data/raw/
+│  ├─ data/raw/
 │  │  └─ XXH2023_YRBSS_data.csv        dataset original YRBS 2023 (CDC)
 │  └─ notebooks/
 │     └─ S1_F1_Definicion.ipynb        Fase 1 — definición del problema y entorno
