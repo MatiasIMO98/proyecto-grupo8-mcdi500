@@ -25,21 +25,22 @@ sueño, mediante un flujo de trabajo reproducible, documentado y colaborativo.
 ```
 proyecto-grupo8-mcdi500/
 ├─ F1/
+│  ├─ Data/raw/
+│  │  └─ mental_health_and_technology_usage_2024.csv
 │  └─ notebooks/
 │     └─ S1_F1_Definicion.ipynb        Fase 1 — definición del problema y entorno
 ├─ F2/
-│  ├─ data/processed/                  dataset limpio y transformado
 │  └─ S1_F2_Preprocesamiento.ipynb     Fase 2 — obtención, limpieza y transformación
-├─ F3/                                 Fase 3 (pendiente)
-├─ F4/                                 Fase 4 (pendiente)
-├─ src/
-│  └─ procesamiento.py                 funciones reutilizables (carga, diagnóstico, transformación, validación)
+├─ F3/
+│  └─ notebooks/
+│     └─ Fase 3.md                     (pendiente: notebook de Fase 3)
+├─ F4/
+│  └─ notebooks/
+│     └─ Fase 4.md                     (pendiente: notebook de Fase 4)
 ├─ docs/
-│  ├─ Mapa Conceptual Proyecto/
 │  ├─ Informe/
-│  └─ Referencias/                     (crear cuando corresponda)
+│  └─ Mapa Conceptual Proyecto/
 ├─ requirements.txt                    dependencias del proyecto (único, en la raíz)
-├─ .gitignore                          qué queda fuera del control de versiones
 └─ README.md                           este archivo
 ```
 
