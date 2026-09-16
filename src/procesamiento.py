@@ -64,27 +64,30 @@ ESCALAS_ORDINALES = {
 
 def cargar_datos(ruta: str) -> pd.DataFrame:
     """
-    Carga el CSV del YRBS 2023 con las correcciones documentadas.
+    Carga el CSV del YRBS 2023 tal como viene del CDC, con una única
+    corrección de tipo documentada.
 
-    Correcciones aplicadas (bitácora):
-      1. dtype={'q6orig': 'string'} — resuelve DtypeWarning causado por
-         la mezcla de texto ("N N") y códigos numéricos en q6orig.
-         No se descarta: se documenta como hallazgo de calidad real.
-      2. orig_rec eliminada — vacía al 100 % (20.103/20.103 nulos).
+    Corrección aplicada (bitácora 2.2):
+      dtype={'q6orig': 'string'} — resuelve el DtypeWarning causado por
+      la mezcla de texto ("N N") y códigos numéricos en q6orig.
+      La columna NO se descarta: la mezcla es un hallazgo de calidad
+      real del archivo original y se documenta como tal.
+
+    Nota: `orig_rec` se conserva en la carga para permitir su diagnóstico
+    explícito en el notebook (bitácora 2.1). Su eliminación es una decisión
+    del pipeline, no de la lectura del archivo.
 
     Args:
         ruta: ruta al CSV original (relativa al directorio de trabajo).
 
     Returns:
-        DataFrame con 20.103 filas y 116 columnas.
+        DataFrame con 20.103 filas y 117 columnas.
     """
-    df = pd.read_csv(
+    return pd.read_csv(
         ruta,
         dtype={"q6orig": "string"},
         low_memory=False,
     )
-    df = df.drop(columns=["orig_rec"], errors="ignore")
-    return df
 
 
 def seleccionar_columnas(df: pd.DataFrame) -> pd.DataFrame:

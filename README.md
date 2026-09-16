@@ -65,14 +65,15 @@ colaborativo.
 ## Estructura del repositorio
 ```
 proyecto-grupo8-mcdi500/
+├─ src/
+│  └─ procesamiento.py                 funciones: carga, selección, diagnóstico,
+│                                      clasificación, transformación, validación
 ├─ F1/
 │  ├─ data/raw/
 │  │  └─ XXH2023_YRBSS_data.csv        dataset original YRBS 2023 (CDC)
 │  └─ notebooks/
 │     └─ S1_F1_Definicion.ipynb        Fase 1 — definición del problema y entorno
 ├─ F2/
-│  ├─ src/
-│  │  └─ procesamiento.py              funciones de carga, selección y validación
 │  ├─ data/processed/                  salida del pipeline (entrada de F3)
 │  └─ notebooks/
 │     └─ S1_F2_Preprocesamiento.ipynb  Fase 2 — obtención, limpieza y transformación
@@ -83,11 +84,25 @@ proyecto-grupo8-mcdi500/
 │  └─ notebooks/
 │     └─ Fase 4.md                     (pendiente: notebook de Fase 4)
 ├─ docs/
+│  ├─ bitacora_decisiones.md           registro de decisiones técnicas con cifras
 │  ├─ Informe/
 │  └─ Mapa Conceptual Proyecto/
+├─ .gitignore
 ├─ requirements.txt                    dependencias del proyecto (único, en la raíz)
 └─ README.md                           este archivo
 ```
+
+### Módulo `src/procesamiento.py`
+
+| Función | Parámetros | Retorna |
+|---|---|---|
+| `cargar_datos(ruta)` | ruta al CSV original | DataFrame 20.103 × 117 |
+| `seleccionar_columnas(df)` | DataFrame completo | DataFrame 20.103 × 11 |
+| `diagnosticar_datos(df)` | DataFrame | dict: nulos, duplicados, tipos |
+| `clasificar_variables(df)` | DataFrame | dict: columna → rol y escala |
+| `transformar_datos(df)` | DataFrame | DataFrame con ordinales categóricas |
+| `validar_datos(df)` | DataFrame transformado | dict de validaciones + global |
+| `guardar_dataset(df, ruta)` | DataFrame, ruta destino | Path absoluto del archivo |
 
 ## Requisitos y ejecución
 Python 3.11 o superior.
