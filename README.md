@@ -7,11 +7,9 @@ colaborativo.
 
 ## Pregunta de investigación
 
-> ¿En qué medida las horas diarias de uso de dispositivos electrónicos para
-> entretenimiento (Q80) se asocian con la salud mental percibida (Q84) en
-> estudiantes de enseñanza media encuestados en el YRBS 2023, controlando por
-> horas de sueño (Q85), actividad física semanal (Q76), sexo (Q2), edad (Q1) y
-> raza/etnicidad?
+> ¿Qué relación existe entre los patrones de uso de tecnología y los indicadores
+> de salud mental autopercibida y horas de sueño en los estudiantes incluidos en el
+> dataset YRBS 2023, considerando variables sociodemográficas y de actividad física?
 
 
 ## Integrantes
@@ -66,30 +64,33 @@ colaborativo.
 ```
 proyecto-grupo8-mcdi500/
 ├─ src/
-│  └─ procesamiento.py                 funciones: carga, selección, diagnóstico,
-│                                      clasificación, transformación, validación
+│  └─ procesamiento.py    	funciones: carga, selección, diagnóstico,
+│                          	clasificación, transformación, validación
 ├─ F1/
 │  ├─ data/raw/
-│  │  └─ XXH2023_YRBSS_data.csv        dataset original YRBS 2023 (CDC)
+│  │  └─ XXH2023_YRBSS_data.csv      dataset original YRBS 2023 (CDC)
 │  └─ notebooks/
-│     └─ S1_F1_Definicion.ipynb        Fase 1 — definición del problema y entorno
+│     └─ S1_F1_Definicion.ipynb	Fase 1 — definición problema y 
+│					entorno
 ├─ F2/
-│  ├─ data/processed/                  salida del pipeline (entrada de F3)
+│  ├─ data/processed/             salida del pipeline (entrada de F3)
 │  └─ notebooks/
-│     └─ S1_F2_Preprocesamiento.ipynb  Fase 2 — obtención, limpieza y transformación
+│     └─ S1_F2_Preprocesamiento.ipynb  Fase 2 — obtención, limpieza y 
+│				transformación
 ├─ F3/
 │  └─ notebooks/
-│     └─ Fase 3.md                     (pendiente: notebook de Fase 3)
+│     └─ Fase 3.md                    (pendiente: notebook de Fase 3)
 ├─ F4/
 │  └─ notebooks/
-│     └─ Fase 4.md                     (pendiente: notebook de Fase 4)
+│     └─ Fase 4.md                    (pendiente: notebook de Fase 4)
 ├─ docs/
-│  ├─ bitacora_decisiones.md           registro de decisiones técnicas con cifras
+│  ├─ bitacora_decisiones.md 		registro de decisiones técnicas
+│  ├─ diccionario_variables.md 	diccionario de variables data set
 │  ├─ Informe/
 │  └─ Mapa Conceptual Proyecto/
 ├─ .gitignore
-├─ requirements.txt                    dependencias del proyecto (único, en la raíz)
-└─ README.md                           este archivo
+├─ requirements.txt     dependencias del proyecto (único, en la raíz)
+└─ README.md
 ```
 
 ### Módulo `src/procesamiento.py`
