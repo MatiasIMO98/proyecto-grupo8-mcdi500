@@ -15,7 +15,7 @@ colaborativo.
 
 
 ## Integrantes
-- Abigail Roblez Chávez (@abda-abigail-github)
+- Abigail Roblez Chávez (@AbigailRoblesC-github)
 - Daniel Pérez Ramirez (@DanielRamirezPerez-github)
 - Matias Manriquez Ortiz (@MatiasManriquezO-github)
 - Roberto Sánchez Saldivia (@RobertSanchezS-github)
