@@ -234,3 +234,19 @@ def guardar_dataset(df: pd.DataFrame, ruta_relativa: str) -> Path:
     ruta.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(ruta, index=False)
     return ruta.resolve()
+
+
+# Q5 admite respuestas múltiples de texto. raceeth combina Q4 y Q5 según CDC.
+ESCALAS_NOMINALES = {"sexo_cod": [1, 2], "raceeth_cod": list(range(1, 9))}
+ETIQUETAS_REDES = {1:"No usa", 2:"Unas veces al mes", 3:"Una vez a la semana",
+    4:"Unas veces a la semana", 5:"Una vez al día", 6:"Varias veces al día",
+    7:"Una vez por hora", 8:"Más de una vez por hora"}
+
+def verificar_dominios(df):
+    """Detecta códigos inválidos antes de que Categorical los oculte como NA."""
+    errores = {}
+    for col, permitidos in {**ESCALAS_ORDINALES, **ESCALAS_NOMINALES}.items():
+        if col not in df: raise ValueError(f"Falta columna {col}")
+        invalidos = df.loc[df[col].notna() & ~df[col].isin(permitidos), col]
+        errores[col] = {str(k):int(v) for k,v in invalidos.value_counts().items()}
+    return errores
