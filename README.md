@@ -13,7 +13,7 @@ colaborativo.
 
 
 ## Integrantes
-- Abigail Roblez Chávez (@AbigailRoblesC-github)
+- Abigail Robles Chávez (@AbigailRoblesC-github)
 - Daniel Pérez Ramirez (@DanielRamirezPerez-github)
 - Matias Manriquez Ortiz (@MatiasManriquezO-github)
 - Roberto Sánchez Saldivia (@RobertSanchezS-github)
@@ -171,13 +171,12 @@ metodología del informe.
 | 5 | **No ponderar** en F1–F2 | Ponderar exige análisis de encuestas complejas (varianza por conglomerados), fuera del alcance de esta etapa. Las columnas `weight`, `stratum` y `psu` se conservan para fases posteriores |
 | 6 | No imputar faltantes de las variables seleccionadas | Según Apéndice C del codebook, ninguna depende de una pregunta previa: sus nulos son *no responde* genuino, no *no aplica* estructural |
 
-**Limitación declarada:** al no aplicar ponderación muestral, todo resultado
+**Limitación declarada:** al no aplicar ponderación muestral, todo resultado 
 descriptivo de este proyecto describe la muestra de 20.103 estudiantes
 encuestados en 2023 y **no se generaliza** a la población de estudiantes de
 enseñanza media de Estados Unidos.
 
-**Reproducibilidad:** entorno virtual `.venv` + `requirements.txt` (un solo
-archivo en la raíz).
+**Reproducibilidad:** entorno virtual `.venv` + `requirements.txt` (un solo archivo en la raíz).
 
 ## Referencias
 
